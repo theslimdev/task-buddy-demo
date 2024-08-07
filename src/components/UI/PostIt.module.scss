@@ -1,0 +1,123 @@
+/* Some positioning and ratios */
+.sticky-container {
+  width: 270px;
+  position: relative;
+}
+
+.sticky-outer {
+  display: flex;
+  padding-top: 92.5925926%;
+  position: relative;
+
+  width: 100%;
+}
+
+.sticky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* Shadow behind the sticky note */
+.sticky:before {
+  box-shadow: -2px 2px 15px 0 rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.25);
+  content: "";
+  width: 90%;
+  left: 5px;
+  height: 83%;
+  position: absolute;
+  top: 30%;
+}
+
+/* The sticky note itself */
+.sticky-content {
+  width: 100%;
+  height: 100%;
+  font-family: "Nanum Pen Script", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+
+  clip-path: url(#stickyClip);
+
+  padding: 0px 20px;
+  position: relative;
+}
+
+.yellow-sticky {
+  background: linear-gradient(
+    180deg,
+    rgba(254, 255, 156, 1) 0%,
+    rgba(254, 255, 156, 1) 12%,
+    rgba(237, 230, 142, 1) 75%,
+    rgba(255, 249, 145, 1) 100%
+  );
+}
+
+.priority-sticky {
+  background: linear-gradient(
+    180deg,
+    rgba(241, 108, 127, 1) 0%,
+    rgba(241, 108, 127, 1) 12%,
+    rgba(224, 93, 113, 1) 75%,
+    rgba(249, 87, 102, 1) 100%
+  );
+}
+
+.details-post {
+  margin-top: -48px;
+  margin-left: 4px;
+  z-index: -1;
+
+  .task-content-container {
+    margin-bottom: 0;
+  }
+
+  p {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+  }
+}
+
+.collapse-details {
+  display: none;
+}
+
+.expand-details {
+  display: block;
+}
+
+/* Add responsiveness */
+@media screen and (min-width: 640px) {
+  .sticky:before {
+    height: 79%;
+    width: 90%;
+  }
+  .sticky-content {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .sticky:before {
+    height: 75%;
+    width: 90%;
+  }
+  .sticky-content {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .sticky:before {
+    height: 73%;
+    width: 90%;
+  }
+  .sticky-content {
+    font-size: 1.875rem;
+  }
+}

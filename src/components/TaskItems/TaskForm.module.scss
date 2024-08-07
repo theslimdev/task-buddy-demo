@@ -1,0 +1,189 @@
+form {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 12px 11px 14px 0px rgba(0, 0, 0, 0.6);
+
+  .form-element {
+    width: 100%;
+    margin: 20px 0;
+
+    .input-group-mobile {
+      @media only screen and (max-width: 500px) {
+        display: block;
+
+        > input {
+          width: 100%;
+        }
+
+        button.high-priority {
+          margin-top: 5px;
+        }
+      }
+    }
+
+    label {
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    button.high-priority {
+      padding: 5px 20px;
+      border: 2px solid #dc3545;
+      text-shadow: 0 1px 0 #eee;
+      background: #ffffff;
+      color: #000000;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      -webkit-border-radius: 5px;
+      // -webkit-box-shadow: inset 0 1px 1px #fff, inset 0 -1px 1px #aaa,
+      //   0 2px 4px -3px #666;
+
+      &-selected {
+        // -webkit-box-shadow: inset 0 1px 1px #aaa, inset 0 8px 16px -4px #aaa,
+        //   inset 0 -1px 1px #aaa;
+        //border-color: #888 #aaa #eee;
+        background: #dc3545;
+        color: #ffffff;
+      }
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+    }
+
+    textarea#task-descrp-ind {
+      width: 250px;
+      height: 150px;
+
+      @media only screen and (min-width: 400px) {
+        width: 300px;
+      }
+
+      @media only screen and (min-width: 768px) {
+        width: 250px;
+      }
+
+      @media only screen and (min-width: 992px) {
+        width: 400px;
+      }
+    }
+
+    .addtask {
+      //background-color: #076a47;
+      width: 100%;
+      border: none;
+      color: #000000;
+      font-weight: 700;
+      background-color: rgb(254, 255, 156);
+      border: 2px solid rgb(231, 238, 26);
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: rgb(231, 238, 26);
+      }
+    }
+
+    .submit-priority {
+      background-color: rgb(241, 108, 127);
+      border: 2px solid rgb(131, 0, 20);
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: rgb(131, 0, 20);
+        color: #ffffff;
+      }
+    }
+
+    .validate {
+      font-weight: 700;
+      color: rgb(131, 0, 20);
+    }
+  }
+}
+
+form.update-form {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 10px 0;
+  box-shadow: none;
+  height: 100%;
+
+  .task-content-container {
+    margin-bottom: 50px;
+    .task-content {
+      .form-element {
+        color: #000000;
+        margin: 0;
+        input {
+          background-color: transparent;
+          border: none;
+          font-size: 2.5rem;
+          margin: 0;
+          font-weight: 700;
+          padding: 0 4px;
+          line-height: 0;
+
+          &:focus {
+            box-shadow: none;
+            border: 1px solid #000000;
+          }
+        }
+
+        textarea {
+          margin: 0;
+          background-color: transparent;
+          font-size: 1.25rem;
+          border: none;
+          padding: 0 4px;
+          height: 130px;
+          resize: none;
+
+          &:focus {
+            box-shadow: none;
+            border: 1px solid #000000;
+          }
+        }
+      }
+    }
+
+    .task-options {
+      position: absolute;
+      bottom: 15px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      button.high-priority {
+        padding: 8px 6px;
+        border: 2px solid #dc3545;
+        text-shadow: 0 1px 0 #eee;
+        background: #ffffff;
+        color: #000000;
+        font-size: 12px;
+        font-weight: bold;
+        text-decoration: none;
+        -webkit-border-radius: 5px;
+        // -webkit-box-shadow: inset 0 1px 1px #fff, inset 0 -1px 1px #aaa,
+        //   0 2px 4px -3px #666;
+
+        &-selected {
+          // -webkit-box-shadow: inset 0 1px 1px #aaa, inset 0 8px 16px -4px #aaa,
+          //   inset 0 -1px 1px #aaa;
+          //border-color: #888 #aaa #eee;
+          background: #dc3545;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}

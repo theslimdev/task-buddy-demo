@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  //background-image: url("assets/images/img-noise-361x370.png");
+  background: url("assets/images/corkboard_bg_300x300_light.jpg");
+  color: #ffffff;
+  font-size: 1.4rem;
+}
+
+.nopadding {
+  padding: 0;
+}
+
+.tb-container {
+  max-width: 1200px;
+}
+
+footer {
+  border-top: 2px solid #ffffff;
+  margin: 30px 0;
+  padding: 20px 0;
+  text-align: center;
+}

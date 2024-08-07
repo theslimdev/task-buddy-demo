@@ -1,0 +1,9 @@
+.taskbuddy-buddy {
+  font-size: 220px;
+  line-height: 250px;
+
+  @media only screen and (min-width: 992px) {
+    font-size: 300px;
+    line-height: 320px;
+  }
+}
